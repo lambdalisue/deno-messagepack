@@ -1,0 +1,67 @@
+export const snapshot = {};
+
+snapshot[`decode 1`] = `"foo"`;
+
+snapshot[`decode 2`] = `100`;
+
+snapshot[`decode 3`] = `
+[
+  "a",
+  0,
+  "b",
+  1,
+  "c",
+  2,
+]
+`;
+
+snapshot[`decode 4`] = `
+{
+  baz: "qux",
+  foo: "bar",
+}
+`;
+
+snapshot[`DecodeStream 1`] = `"foo"`;
+
+snapshot[`DecodeStream 2`] = `100`;
+
+snapshot[`DecodeStream 3`] = `
+[
+  "a",
+  0,
+  "b",
+  1,
+  "c",
+  2,
+]
+`;
+
+snapshot[`DecodeStream 4`] = `
+{
+  baz: "qux",
+  foo: "bar",
+}
+`;
+
+snapshot[`DecodeStream 5`] = `"foo"`;
+
+snapshot[`DecodeStream 6`] = `100`;
+
+snapshot[`DecodeStream 7`] = `
+[
+  "a",
+  0,
+  "b",
+  1,
+  "c",
+  2,
+]
+`;
+
+snapshot[`DecodeStream 8`] = `
+{
+  baz: "qux",
+  foo: "bar",
+}
+`;
