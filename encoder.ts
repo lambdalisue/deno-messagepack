@@ -1,4 +1,4 @@
-import { Packr } from "https://deno.land/x/msgpackr@v1.8.3/index.js";
+import { Packr } from "msgpackr";
 
 const packr = new Packr({
   useRecords: false,

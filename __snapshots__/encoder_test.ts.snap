@@ -1,109 +1,17 @@
 export const snapshot = {};
 
-snapshot[`encode 1`] = `
-Uint8Array(4) [
-  163,
-  102,
-  111,
-  111,
-]
-`;
+snapshot[`EncodeStream 1`] = `<Buffer a3 66 6f 6f>`;
 
-snapshot[`encode 2`] = `
-Uint8Array(1) [
-  100,
-]
-`;
+snapshot[`EncodeStream 2`] = `<Buffer 64>`;
 
-snapshot[`encode 3`] = `
-Uint8Array(10) [
-  150,
-  161,
-  97,
-  0,
-  161,
-  98,
-  1,
-  161,
-  99,
-  2,
-]
-`;
+snapshot[`EncodeStream 3`] = `<Buffer 96 a1 61 00 a1 62 01 a1 63 02>`;
 
-snapshot[`encode 4`] = `
-Uint8Array(19) [
-  222,
-  0,
-  2,
-  163,
-  102,
-  111,
-  111,
-  163,
-  98,
-  97,
-  114,
-  163,
-  98,
-  97,
-  122,
-  163,
-  113,
-  117,
-  120,
-]
-`;
+snapshot[`EncodeStream 4`] = `<Buffer de 00 02 a3 66 6f 6f a3 62 61 72 a3 62 61 7a a3 71 75 78>`;
 
-snapshot[`EncodeStream 1`] = `
-Uint8Array(4) [
-  163,
-  102,
-  111,
-  111,
-]
-`;
+snapshot[`encode 1`] = `<Buffer a3 66 6f 6f>`;
 
-snapshot[`EncodeStream 2`] = `
-Uint8Array(1) [
-  100,
-]
-`;
+snapshot[`encode 2`] = `<Buffer 64>`;
 
-snapshot[`EncodeStream 3`] = `
-Uint8Array(10) [
-  150,
-  161,
-  97,
-  0,
-  161,
-  98,
-  1,
-  161,
-  99,
-  2,
-]
-`;
+snapshot[`encode 3`] = `<Buffer 96 a1 61 00 a1 62 01 a1 63 02>`;
 
-snapshot[`EncodeStream 4`] = `
-Uint8Array(19) [
-  222,
-  0,
-  2,
-  163,
-  102,
-  111,
-  111,
-  163,
-  98,
-  97,
-  114,
-  163,
-  98,
-  97,
-  122,
-  163,
-  113,
-  117,
-  120,
-]
-`;
+snapshot[`encode 4`] = `<Buffer de 00 02 a3 66 6f 6f a3 62 61 72 a3 62 61 7a a3 71 75 78>`;

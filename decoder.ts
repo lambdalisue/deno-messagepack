@@ -1,5 +1,5 @@
-import { Unpackr } from "https://deno.land/x/msgpackr@v1.8.3/index.js";
-import { concat } from "https://deno.land/std@0.184.0/bytes/concat.ts";
+import { Unpackr } from "msgpackr";
+import { concat } from "@std/bytes";
 
 const unpackr = new Unpackr({
   useRecords: false,
@@ -29,7 +29,7 @@ export class DecodeStream<T extends unknown>
 
   #handle(chunk: Uint8Array, controller: TransformStreamDefaultController<T>) {
     if (this.#incompleteBuffer) {
-      chunk = concat(this.#incompleteBuffer, chunk);
+      chunk = concat([this.#incompleteBuffer, chunk]);
       this.#incompleteBuffer = undefined;
     }
     let values: T[] = [];
