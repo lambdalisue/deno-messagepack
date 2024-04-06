@@ -1,5 +1,5 @@
 import { encode, EncodeStream } from "./encoder.ts";
-import { assertSnapshot } from "https://deno.land/std@0.184.0/testing/snapshot.ts";
+import { assertSnapshot } from "@std/testing/snapshot";
 
 const testcases = {
   string: "foo",
