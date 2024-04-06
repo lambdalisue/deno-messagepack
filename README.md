@@ -1,14 +1,14 @@
 # messagepack
 
-[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/messagepack)
+[![jsr](https://img.shields.io/jsr/v/%40lambdalisue/messagepack?logo=javascript&logoColor=white)](https://jsr.io/@lambdalisue/messagepack)
+[![denoland](https://img.shields.io/github/v/release/lambdalisue/deno-messagepack?logo=deno&label=denoland)](https://github.com/lambdalisue/deno-messagepack/releases)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/messagepack/mod.ts)
 [![Test](https://github.com/lambdalisue/deno-messagepack/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-messagepack/actions?query=workflow%3ATest)
 
-[Deno][deno] module to support [MessagePack][messagepack] by
-[msgpackr][msgpackr].
+TypeScript module to support [MessagePack] by [msgpackr].
 
-[deno]: https://deno.land/
-[messagepack]: https://github.com/messagepack/messagepack/blob/master/spec.md
+[Deno]: https://deno.land/
+[MessagePack]: https://github.com/messagepack/messagepack/blob/master/spec.md
 [msgpackr]: https://github.com/kriszyp/msgpackr
 
 ## License
