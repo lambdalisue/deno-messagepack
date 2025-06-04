@@ -1,5 +1,12 @@
 import { Unpackr } from "msgpackr";
 import { concat } from "@std/bytes";
+import { as, is } from "@core/unknownutil";
+
+const isUnpackrError = is.ObjectOf({
+  incomplete: is.Boolean,
+  lastPosition: is.Number,
+  values: as.Optional(is.ArrayOf(is.Any)),
+});
 
 const unpackr = new Unpackr({
   useRecords: false,
@@ -36,7 +43,7 @@ export class DecodeStream<T extends unknown>
     try {
       values = unpackr.unpackMultiple(chunk) as T[];
     } catch (err) {
-      if (err.incomplete) {
+      if (isUnpackrError(err) && err.incomplete) {
         this.#incompleteBuffer = chunk.slice(err.lastPosition);
         values = err.values ?? [];
       } else {
