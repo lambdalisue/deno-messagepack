@@ -1,13 +1,20 @@
 import { Unpackr } from "msgpackr";
 import { concat } from "@std/bytes";
+import { is } from "@core/unknownutil";
 
 const unpackr = new Unpackr({
   useRecords: false,
   structures: [],
 });
 
+const isUnpackrError = is.ObjectOf({
+  incomplete: is.Boolean,
+  lastPosition: is.Number,
+  values: is.ArrayOf(is.Any),
+});
+
 /** Decode a single MessagePack-encoded object, and returns the decoded object. */
-export function decode<T extends unknown>(chunk: ArrayLike<number>): T {
+export function decode<T extends unknown>(chunk: Uint8Array): T {
   return unpackr.unpack(chunk) as T;
 }
 
@@ -36,12 +43,12 @@ export class DecodeStream<T extends unknown>
     try {
       values = unpackr.unpackMultiple(chunk) as T[];
     } catch (err) {
-      if (err.incomplete) {
+      if (isUnpackrError(err)) {
         this.#incompleteBuffer = chunk.slice(err.lastPosition);
         values = err.values ?? [];
-      } else {
-        throw err;
+        return;
       }
+      throw err;
     } finally {
       for (const value of values) {
         controller.enqueue(value);

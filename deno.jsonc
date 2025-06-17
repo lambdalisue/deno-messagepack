@@ -7,6 +7,7 @@
     "check": "deno check **/*.ts",
   },
   "imports": {
+    "@core/unknownutil": "jsr:@core/unknownutil@^4.3.0",
     "@std/bytes": "jsr:@std/bytes@^1.0.0",
     "@std/testing": "jsr:@std/testing@^1.0.0",
     "msgpackr": "npm:msgpackr@^1.11.4",
