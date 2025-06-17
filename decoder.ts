@@ -1,6 +1,6 @@
 import { Unpackr } from "msgpackr";
 import { concat } from "@std/bytes";
-import { is } from "@core/unknownutil";
+import { as, is } from "@core/unknownutil";
 
 const unpackr = new Unpackr({
   useRecords: false,
@@ -10,7 +10,7 @@ const unpackr = new Unpackr({
 const isUnpackrError = is.ObjectOf({
   incomplete: is.Boolean,
   lastPosition: is.Number,
-  values: is.ArrayOf(is.Any),
+  values: as.Optional(is.ArrayOf(is.Any)),
 });
 
 /** Decode a single MessagePack-encoded object, and returns the decoded object. */
