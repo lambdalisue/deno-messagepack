@@ -1,6 +1,5 @@
 {
   "name": "@lambdalisue/messagepack",
-  "version": "0.0.0",
   "exports": "./mod.ts",
   "tasks": {
     "test": "deno test -A --parallel --doc --shuffle",
